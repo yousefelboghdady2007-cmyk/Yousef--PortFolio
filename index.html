@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #0f172a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin: 0 0 15px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            color: #94a3b8;
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            max-width: 550px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .hero-buttons a,
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #38bdf8;
+            color: #0b1120;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-buttons a:hover,
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 35px 8%;
+            text-align: center;
+            scroll-margin-top: 75px;
+        }
+
+        .section h2 {
+            color: #38bdf8;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .section > p {
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.9;
+            color: #cbd5e1;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: #151f33;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #26354d;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        #projects .projects-grid,
+        #assignments .projects-grid {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 25px;
+            max-width: 750px;
+            margin: 30px auto 0;
+        }
+
+        #projects .project-card,
+        #assignments .project-card {
+            flex: 1;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+
+        #assignments .btn {
+            margin: 10px 5px 0;
+        }
+
+        footer {
+            color: #94a3b8;
+            background: #0f172a;
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            #projects .projects-grid,
+            #assignments .projects-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #projects .project-card,
+            #assignments .project-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Youssef.</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">My Work</a></li>
+            <li><a href="#assignments">Assignments</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Hi, I'm <span>Youssef</span></h1>
+        <h2>Computer Science Student</h2>
+
+        <p>
+            Welcome to my personal portfolio.
+            I'm passionate about programming, technology,
+            and learning new skills to build amazing things.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#about">About Me</a>
+            <a href="#skills">My Skills</a>
+            <a href="#projects">My Work</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#contact">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+
+        <p>
+            My name is Youssef Mahmoud Mohamed Elboghdady.
+            I'm a Computer Science student interested in programming,
+            web development, and technology.
+
+            I'm currently learning HTML, CSS, and C++,
+            and working on improving my problem-solving skills.
+        </p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>My Skills</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>C++</h3>
+                <p>Learning programming fundamentals using C++.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Functions & Arrays</h3>
+                <p>Practicing functions, arrays, and basic programming.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>HTML</h3>
+                <p>Building the structure of web pages.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>CSS</h3>
+                <p>Styling web pages and learning responsive design.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Problem Solving</h3>
+                <p>Improving logical thinking through programming exercises.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>My Work</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Personal Portfolio</h3>
+                <p>A personal website built using HTML and CSS.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>C++ Practice</h3>
+                <p>Programming exercises to practice C++ fundamentals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="assignments" class="section">
+        <h2>My Assignments</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Assignment 1</h3>
+
+                <p>View my first assignment and its solution.</p>
+
+                <a href="Assignments/assignment%201.html" class="btn">
+                    View Assignment 1
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Assignment 2</h3>
+
+                <p>View my second assignment and its solution.</p>
+
+                <a href="Assignments/assignment%202%20solution/index.html" class="btn">
+                    View Assignment 2
+                </a>
+
+                <br>
+
+                <a href="Assignments/assignment%202%20solution/page2.html" class="btn">
+                    View Page 2
+                </a>
+
+                <br>
+
+                <a href="Assignments/assignment%202%20solution/table.html" class="btn">
+                    View Table Task
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+
+        <p>
+            Have a question or want to get in touch?
+            Feel free to contact me by email.
+        </p>
+
+        <br>
+
+        <a href="mailto:yousefelboghdady2007@gmail.com" class="btn">
+            Email Me
+        </a>
+    </section>
+
+    <footer class="section">
+        <p>&copy; 2026 Youssef. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
